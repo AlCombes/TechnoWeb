@@ -1,0 +1,28 @@
+body {
+  background: #eeeeee;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.jeu {
+  display: block;
+}
+
+div.jeu p {
+  background: #555555;
+  border-radius: 4px;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 5px 5px 5px;
+}
+
+div.jeu p a {
+  display: none;
+  line-height: 80px;
+  height: 80px;
+  text-align: center;
+} /* ne pas afficher les label des ancres */
