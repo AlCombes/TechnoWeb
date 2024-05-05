@@ -107,12 +107,12 @@ computedArray = initTableauHasard(20, 200);
 console.log(computedArray);
 
 // ================================================================================================
-// exo 7.a
+// exo 7.a - afficher dans la console le premier fils du nœud ayant p2 comme identifiant
 console.log(document.getElementById("p2").firstElementChild); // object Tex
 document.getElementById("p2").childNodes[0]; // version AC
 
 // ================================================================================================
-// exo 7.b
+// exo 7.b - afficher dans la console le texte de toutes les balises <a>
 let noeuds = document.getElementsByTagName("a");
 console.log(noeuds);
 // v1 boucle for i
@@ -125,11 +125,11 @@ for (let n of noeuds) {
 }
 
 // ================================================================================================
-// exo 7.c
+// exo 7.c - insérer le texte « ici la date » dans la balise ayant today comme identifiant.
 document.getElementById("today").textContent = "ici la date";
 
 // ================================================================================================
-// exo 7.d
+// exo 7.d - changer le texte « puis » par « et ».
 //document.getElementById("p22").textContent = " et ";  // pb = écrase l’ancre
 //document.getElementById("p22").innerHTML=" et ";  // pb = écrase l’ancre
 // aller sur le nœud de type texte
@@ -137,7 +137,8 @@ document.getElementById("p22").firstChild.textContent = " et ";
 document.getElementById("p22").childNodes[0].textContent = "et "; // version AC
 
 // ================================================================================================
-// exo 7.e : <p class="paragraphe4" id='p24'>et encore <a href="#">lien4</a> fin</p>
+// exo 7.e - Ajouter un quatrième paragraphe après le paragraphe d’id 23.
+// <p class="paragraphe4" id='p24'>et encore <a href="#">lien4</a> fin</p>
 let elt = document.createElement("p"); // l'élément
 elt.id = "p24"; // l'attribut id
 elt.class = "paragraphe4"; // la classe
@@ -145,7 +146,7 @@ elt.innerHTML = 'et encore <a href="#">lien4</a> fin'; // le texte HTML du parag
 document.getElementById("p2").appendChild(elt);
 
 // ================================================================================================
-// exo7.f :
+// exo7.f : comment ajouter le 4ème paragraphe avant le 1er paragraphe ?
 //  document.getElementById("p2").insertBefore(elt,document.getElementById("p2").firstChild);
 
 // ================================================================================================
