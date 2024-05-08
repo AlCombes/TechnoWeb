@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript in Body</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+
+
+switch(8) {
+    case 6:
+    case 7:
+        console.log("L'enfant est un poussin");
+        break;
+    case 8:
+    case 9:
+        console.log("L'enfant est un pupille");
+        break;
+    case 10:
+    case 11:
+        console.log("L'enfant est un minime");
+        break;
+    case 12:
+        console.log("L'enfant est un cadet");
+        break;
+    default:
+        console.log("L'enfant est hors catégorie");
+}
+Nb = 5
+let tableau = new Array(Nb);
+for(let i=0; i<tableau.length;i=i+1){
+    tableau[i] = Math.round(Math.random()*2);
+    console.log(tableau[i]);
+}
+console.log(tableau.length);
+console.log(tableau);
+
+let table = tableau;
+let index1 = 0;
+let index2 = 4;
+function identique(table,index1,index2){
+if (table[index1] == table[index2]){
+    console.log("Vrai");
+    console.log(index2);
+}
+else{
+    console.log("Faux");
+    console.log(index2);
+}
+}
+
+let presente = identique (tableau,0,Nb);
+
+</script>
+
+</body>
+</html> 

@@ -42,6 +42,7 @@ console.log(testCat);
 // Math.round(x) : Calcule l’arrondi du nombre n : n=3,4  arrondi = 3 n=3,6  arrondi = 4
 
 {
+
 function createTable(size, MAX_VALUE) {
   let table = [];
   for (let index = 0; index < size; index++) {
@@ -170,7 +171,7 @@ document.getElementById("p2").appendChild(elt);
 // exo7.g : supprimer le paragraphe d'id p22
 {
 let p = document.getElementById("p22");
-document.getElementById("p2").removeChild(p);
+// document.getElementById("p2").removeChild(p);
 }
 
 // ================================================================================================
