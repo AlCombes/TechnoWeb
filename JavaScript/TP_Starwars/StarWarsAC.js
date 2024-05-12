@@ -17,7 +17,7 @@ btnFilms.addEventListener('click', function (event) {
             // pour affichage dans le navigateur
             let films = dataJSON.results;
             for (let element of films) {
-                let textToShow = element.title + " (épisode " + element['episode_id'] + ")";
+                let textToShow = element.title + " (épisode " + element['episode_id'] + ")" + " - " + element.release_date ;
                 console.log(textToShow);
                 filmList.innerHTML += "<li>"+ textToShow + "</li>";
             };
