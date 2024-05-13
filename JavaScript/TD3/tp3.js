@@ -77,7 +77,7 @@ document.addEventListener('keydown', function (event) {
   console.log("Pos Top =" + offsetTop);
   switch (kbKey) {
     case "ArrowDown":
-      if (offsetTop+ objectToMove.offsetHeight < window.innerHeight) { objectToMove.style.top = (offsetTop + 10) + "px"; }
+      if (offsetTop + objectToMove.offsetHeight < window.innerHeight) { objectToMove.style.top = (offsetTop + 10) + "px"; }
       break;
     case "ArrowUp":
       if (offsetTop > 0) { objectToMove.style.top = (offsetTop - 10) + "px"; }
@@ -93,7 +93,7 @@ document.addEventListener('keydown', function (event) {
   }
 })
 
-document.addEventListener('click', function(event){
+document.addEventListener('click', function (event) {
   let posX = event.clientX;
   let posY = event.clientY;
   objectToMove.style.top = posY + "px";
@@ -112,3 +112,26 @@ objectToMove.addEventListener('click', function (event) {
   // this.style.height = (this.offsetHeight + 10) + "px";
   event.stopPropagation();
 })
+
+
+document.getElementById("pays").addEventListener('keydown', function (event) {
+  let elt = document.getElementById("proposition");
+  //event.stopPropagation();
+  //event.preventDefault();
+  elt.innerHTML = "";
+  for (let country of listePays) {
+    if (country.includes(elt.value))
+      console.log(country);
+      elt.innerHTML +=
+        "<option value =" +
+        country +
+        ">" +
+        country +
+        "</option>";
+  };
+
+})
+
+const listePays = ["Afghanistan", "Afrique du Sud", "Albanie", "Algérie", "Allemagne", "Andorre",
+  "Angola", "Anguilla", "Antarctique", "Antigua-et-Barbuda", "Antilles néerlandaises", "Arabie saoudite",
+  "Argentine", "Arménie", "Aruba", "Australie", "Autriche", "Azerbaïdjan"];

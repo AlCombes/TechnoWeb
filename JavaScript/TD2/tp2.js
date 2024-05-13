@@ -51,8 +51,8 @@ document.getElementById("titre").textContent = "TP2 manipulation du DOM";
 {
 elt = document.getElementById("c1");
 console.log(elt);
- document.getElementById("c1").style.background = "red";
-// document.getElementById("c2").style.background = "green";
+document.getElementById("c1").style.background = "red";
+document.getElementById("c2").style.background = "green";
 }
 // ================================================================================================
 // Ajouter une 3ème carte de couleur bleue, d’id c3 et d’ancre 3
@@ -64,7 +64,7 @@ eltToAdd.innerHTML = "<a> 3 </a>";
 eltToAdd.style.background = "blue";
 
 elt = document.getElementById("j1");
-// elt.appendChild(eltToAdd);
+elt.appendChild(eltToAdd);
 }
 // ================================================================================================
 // Ecrire la fonction « ajouterCarte » qui ajoute une nouvelle carte connaissant son numéro (4, 5,
@@ -84,8 +84,8 @@ function ajouterCarte(numero) {
   elt.appendChild(eltToAdd);
 }
 
-// ajouterCarte(4);
-// ajouterCarte(5);
+ajouterCarte(4);
+ajouterCarte(5);
 
 function couleurAleatoire() {
   let tCouleurs = ["blue", "red", "purple", "yellow", "green"];
@@ -98,9 +98,9 @@ function couleurAleatoire() {
 // ================================================================================================
 // Ecrire une boucle qui ajoute les cartes 6 à 10 en utilisant la fonction précédente
 {
-// for (let index = 6; index <= 10; index++) {
-//   ajouterCarte(index);
-// }
+for (let index = 6; index <= 10; index++) {
+  ajouterCarte(index);
+}
 }
 // ================================================================================================
 // Ecrire la fonction « supprimerCarte » qui supprime une carte dont on connait le numéro.
@@ -112,7 +112,7 @@ function supprimerCarte(numero) {
   return elt;
 }
 
-// supprimerCarte(5);
+supprimerCarte(5);
 }
 // ================================================================================================
 // Déplacer une carte : Ecrire la fonction « deplacerCarte » qui déplace la première carte en
@@ -129,7 +129,7 @@ function deplacerCarte() {
 // automatiquement toutes les cartes au rythme d’une carte toutes les 2 secondes. Utiliser pour
 // cela la fonction précédente deplacerCarte.
 {
-// setInterval(deplacerCarte, 2000);
+setInterval(deplacerCarte, 2000);
 }
 // ================================================================================================
 // Retourner une carte : écrire une fonction permettant de retourner une carte (la carte apparait
@@ -144,8 +144,8 @@ function retournerCarte(numero) {
   elt.style.textAlign = "center";
 }
 
-// retournerCarte(2);
-// retournerCarte(7);
+retournerCarte(2);
+retournerCarte(7);
 }
 // ================================================================================================
 // Ecrire une fonction permettant de zoomer une carte (la carte doit voir sa taille x 2)
@@ -157,6 +157,6 @@ function zoomerCarte(numero) {
   elt.style.height = "160px";
 }
 
-// zoomerCarte(3);
-// zoomerCarte(8);
+zoomerCarte(3);
+zoomerCarte(8);
 }

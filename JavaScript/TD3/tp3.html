@@ -1,31 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<title>TP Javascript</title>
-	<link href="tp3.css" rel="stylesheet"/>
+	<link href="tp3.css" rel="stylesheet" />
 
-<style>
-	
-</style>
+	<style>
+
+	</style>
 </head>
+
 <body>
-	<main class="contenu">		
+	<main class="contenu">
 		<form>
 			<input type="text" id="valeur" size="5" placeholder="prix">
 			<input type="button" id="versfrancs" value="Euros >> Francs">
 			<input type="button" id="verseuros" value="Francs >> Euros">
 			<input type="text" id="resultat" size="15" readonly="true" placeholder="résultat">
-		</form >
+		</form>
 
 		<form id="inscription">
-			<input type="password" name="passwd" id="passwd" placeholder="mot de passe" required/>
+			<input type="password" name="passwd" id="passwd" placeholder="mot de passe" required />
 			<span id="msgPasswd"></span>
 		</form>
-	</main>	
 
-	<div id="c1"></p>
+		<input type="text" name="pays" id="pays" list="proposition" placeholder="nom de pays" />
+		<datalist id="proposition"></datalist>
 
-	<script src="tp3.js"></script> 
+	</main>
+
+	<div id="c1"></div>
+
+
+
+
+	<script src="tp3.js"></script>
 </body>
+
 </html>

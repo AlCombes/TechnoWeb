@@ -35,6 +35,7 @@ let indivTextInput = document.getElementById("filter");
 let dropDownOutput = document.getElementById("individuals");
 
 btnFilterIndiv.addEventListener('click', function (event) {
+
     urlFilter = urlPeople + "?search=" + indivTextInput.value;
     console.log("URL Filter = " + urlFilter);
     // executer la req AJAX
