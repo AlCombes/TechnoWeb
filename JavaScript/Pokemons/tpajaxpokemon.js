@@ -15,10 +15,10 @@ function getPokemons() {
     .then((dataJSON) => {
       //   console.log(dataJSON);
       //   console.log(JSON.parse(JSON.stringify(dataJSON)));
-      let pokemons = dataJSON.results;
+      let pokes = dataJSON.results;
 
       // Sort version AC :
-      pokemons.sort(comparePokemons);
+      pokes.sort(comparePokemons);
 
       // Sort version JMP :
       //   let pokes = dataJSON.results.sort((p1, p2) =>
