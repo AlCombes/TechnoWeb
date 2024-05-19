@@ -2,7 +2,7 @@
 const headers = {
   "Content-Type": "application/json",
   Authorization:
-    "Bearer BQAIm1luRCfEEIlH2HAHadfnG-4qAU0Lni4CAGu6yg9frIP4lcMDWDDePHUrLxlcZ54z1by0wZuCVUwxw9zGl5B7PYwkq_EuLcmcuNowt6CXMO1IcnY",
+    "Bearer BQCm2IFU4BJ3sn21Y_9mFqilhs4w33we-mwYuGnf2xa2uz5zA0Wp-5Eo4Qf4QXDxHhJO47rx120piAvkSjndRH3o29TUq76z_cFTpdxItHeUxs7w0Fk",
 };
 const fetchOptions = { headers: headers };
 // l'url de recherche d'albums
