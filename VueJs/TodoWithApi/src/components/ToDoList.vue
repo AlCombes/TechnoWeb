@@ -1,3 +1,6 @@
+<!-- ==========================================================================
+  SCRIPT
+============================================================================-->
 <script setup>
 import { reactive } from "vue";
 import { Chose } from "../Chose";
@@ -8,9 +11,11 @@ const listeC = reactive([]);
 const usrId = 19811;
 //const usrId = 1;
 
-function handlerFaire(index) {
-  const chose = listeC[index];
-  console.log(chose);
+/**----------------------------------------------------------------------------
+ * Handles todo task modification when done/undone
+ * @param {Chose} chose - Chose to modify in DB
+ */
+function handlerFaire(chose) {
   // Requête PUT API
   fetch(
     "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" + usrId + "/todos",
@@ -37,12 +42,42 @@ function handlerFaire(index) {
     .catch((error) => console.error("Erreur : " + error));
 }
 
-function handlerDelete(index) {
-  listeC.splice(index, 1);
-}
-function handlerAdd(libelle) {
+/**----------------------------------------------------------------------------
+ * Deletes a specific task in listeC
+ * @param {integer} idChose - The id of the task in the table
+ */
+function handlerDelete(idChose) {
+  // l’url de la ressource :
   const url =
-    "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" + usrId + "/todos"; // l’url de la ressource
+    "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" +
+    usrId +
+    "/todos/" +
+    idChose;
+  console.log("url =" + url);
+  let fetchOptions = { method: "DELETE" }; // les options de l'API fetch
+  fetch(url, fetchOptions)
+    .then((response) => {
+      return response.json();
+    })
+    .then((dataJSON) => {
+      // dataJSON = les données renvoyées
+      console.log(dataJSON);
+      getTodos();
+    })
+    .catch((error) => {
+      // gestion des erreurs
+      console.log(error);
+    });
+}
+
+/**----------------------------------------------------------------------------
+ * Adds task in DB
+ * @param {string} libelle - The text of the task to add
+ */
+function handlerAdd(libelle) {
+  // l’url de la ressource :
+  const url =
+    "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" + usrId + "/todos";
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   const fetchOptions = {
@@ -66,9 +101,13 @@ function handlerAdd(libelle) {
   getTodos();
 }
 
+/**----------------------------------------------------------------------------
+ * Refresh content of todo DB with a HTTP GET
+ */
 function getTodos() {
+  // l’url de la ressource :
   const url =
-    "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" + usrId + "/todos"; // l’url de la ressource
+    "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" + usrId + "/todos";
   console.log("url =" + url);
   let fetchOptions = { method: "GET" }; // les options de l'API fetch
   fetch(url, fetchOptions)
@@ -96,6 +135,9 @@ onMounted(() => {
 });
 </script>
 
+<!-- ==========================================================================
+  TEMPLATE 
+============================================================================-->
 <template>
   <ToDoForm @addC="handlerAdd"></ToDoForm>
   <h3>Liste des choses à faire</h3>
@@ -105,7 +147,7 @@ onMounted(() => {
         :chose="chose"
         :indexInTable="index"
         @eventFaire="handlerFaire"
-        @eventDefaire="handlerDelete"
+        @eventDelete="handlerDelete"
       ></ToDoListItem>
     </li>
   </ul>

@@ -6,11 +6,11 @@ defineProps(["chose", "indexInTable"]);
     {{ console.log(chose) }}
     {{ chose.pourAfficher() }}
     {{ console.log(indexInTable) }}
-    <button @click="$emit('eventFaire', indexInTable)">
+    <button @click="$emit('eventFaire', chose)">
       <span v-if="chose.fait">Défaire</span>
       <span v-else>Faire</span>
     </button>
-    <button @click="$emit('eventDefaire', indexInTable)">Supprimer</button>
+    <button @click="$emit('eventDelete', chose.id)">Supprimer</button>
   </li>
 </template>
 <style></style>
