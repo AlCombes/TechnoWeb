@@ -53,7 +53,6 @@ function handlerDelete(idChose) {
     usrId +
     "/todos/" +
     idChose;
-  console.log("url =" + url);
   let fetchOptions = { method: "DELETE" }; // les options de l'API fetch
   fetch(url, fetchOptions)
     .then((response) => {
@@ -61,7 +60,6 @@ function handlerDelete(idChose) {
     })
     .then((dataJSON) => {
       // dataJSON = les données renvoyées
-      console.log(dataJSON);
       getTodos();
     })
     .catch((error) => {
@@ -92,7 +90,6 @@ function handlerAdd(libelle) {
     })
     .then((dataJSON) => {
       // dataJSON = les données renvoyées
-      console.log(dataJSON);
     })
     .catch((error) => {
       // gestion des erreurs
@@ -108,7 +105,6 @@ function getTodos() {
   // l’url de la ressource :
   const url =
     "https://webmmi.iut-tlse3.fr/~pecatte/todos/public/" + usrId + "/todos";
-  console.log("url =" + url);
   let fetchOptions = { method: "GET" }; // les options de l'API fetch
   fetch(url, fetchOptions)
     .then((response) => {
@@ -116,10 +112,8 @@ function getTodos() {
     })
     .then((dataJSON) => {
       // dataJSON = les données renvoyées
-      console.log(dataJSON);
       listeC.splice(0, listeC.length);
       for (let task of dataJSON) {
-        console.log(task.id);
         let p = new Chose(task.id, task.libelle, task.fait);
         listeC.push(p);
       }

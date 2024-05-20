@@ -3,9 +3,7 @@ defineProps(["chose", "indexInTable"]);
 </script>
 <template>
   <li>
-    {{ console.log(chose) }}
     {{ chose.pourAfficher() }}
-    {{ console.log(indexInTable) }}
     <button @click="$emit('eventFaire', chose)">
       <span v-if="chose.fait">Défaire</span>
       <span v-else>Faire</span>
