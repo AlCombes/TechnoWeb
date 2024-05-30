@@ -1,0 +1,1 @@
+import{_ as t,o as s,e as o,w as a,V as c,b as n,d as e}from"./index-CApvx_fh.js";const r="/TechnoWeb/VueJs/vue_movies/assets/about-xqZUKKBb.jpeg",_={},u=e("br",null,null,-1),l=e("img",{src:r},null,-1);function i(d,b){return s(),o(c,null,{default:a(()=>[n(" Page About "),u,l]),_:1})}const m=t(_,[["render",i]]);export{m as default};
