@@ -1,1 +1,0 @@
-import{_ as e,o as t,e as a,w as o,V as c,b as r}from"./index-DGxL_cMA.js";const n={};function s(_,f){return t(),a(c,null,{default:o(()=>[r("Choix 1")]),_:1})}const x=e(n,[["render",s]]);export{x as default};
