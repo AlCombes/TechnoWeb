@@ -1,0 +1,1 @@
+import{_ as t,o,b as s,w as a,V as c,d as n,a as e}from"./index-cmC9Ycxi.js";const _="/TechnoWeb/assets/about-xqZUKKBb.jpeg",r={},l=e("br",null,null,-1),u=e("img",{src:_},null,-1);function i(d,b){return o(),s(c,null,{default:a(()=>[n(" Page About "),l,u]),_:1})}const p=t(r,[["render",i],["__file","PageAbout.vue"]]);export{p as default};

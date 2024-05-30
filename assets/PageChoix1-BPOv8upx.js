@@ -1,0 +1,1 @@
+import{_ as e,o as a,b as o,w as t,V as c,d as r}from"./index-cmC9Ycxi.js";const n={};function s(_,i){return a(),o(c,null,{default:t(()=>[r("Choix 1")]),_:1})}const x=e(n,[["render",s],["__file","PageChoix1.vue"]]);export{x as default};

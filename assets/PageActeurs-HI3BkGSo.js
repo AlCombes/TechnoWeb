@@ -1,0 +1,1 @@
+import{_ as e,o as t,b as a,w as c,V as r,d as s}from"./index-cmC9Ycxi.js";const o={};function n(_,u){return t(),a(r,null,{default:c(()=>[s("Page Acteurs")]),_:1})}const l=e(o,[["render",n],["__file","PageActeurs.vue"]]);export{l as default};

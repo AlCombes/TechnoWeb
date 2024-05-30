@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as n,F as o,a as e}from"./index-cmC9Ycxi.js";const _="/TechnoWeb/cinematheque.jpg",c=e("h1",null,"Films Library V10",-1),a=e("img",{src:_},null,-1),r={__name:"index",setup(i){return(l,m)=>(t(),n(o,null,[c,a],64))}},u=s(r,[["__file","index.vue"]]);export{u as default};

@@ -1,1 +1,0 @@
-import{o as t,c as s,F as n,a as e}from"./index-Bf8eF7Jk.js";const o="/TechnoWeb/cinematheque.jpg",a=e("h1",null,"Films Library V10",-1),c=e("img",{src:o},null,-1),m={__name:"index",setup(r){return(_,l)=>(t(),s(n,null,[a,c],64))}};export{m as default};
