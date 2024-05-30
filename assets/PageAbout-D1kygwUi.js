@@ -1,1 +1,0 @@
-import{_ as t,o,e as s,w as a,V as c,b as n,d as e}from"./index-Ca_DfeRW.js";const r="/TechnoWeb/assets/about-xqZUKKBb.jpeg",_={},l=e("br",null,null,-1),u=e("img",{src:r},null,-1);function d(i,b){return o(),s(c,null,{default:a(()=>[n(" Page About "),l,u]),_:1})}const p=t(_,[["render",d]]);export{p as default};
