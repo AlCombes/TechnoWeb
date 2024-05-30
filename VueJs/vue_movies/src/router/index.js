@@ -1,4 +1,3 @@
-
 /**
  * router/index.ts
  *
@@ -6,10 +5,18 @@
  */
 
 // Composables
-import { createRouter, createWebHistory } from 'vue-router/auto'
+import { createRouter } from "vue-router/auto";
+import { createWebHashHistory } from "vue-router";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-})
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+});
 
-export default router
+console.log("Base URL : " + import.meta.env.BASE_URL);
+
+export default router;
+
+// const router = new Router({
+//   mode: "history",
+// });
+// export default router;

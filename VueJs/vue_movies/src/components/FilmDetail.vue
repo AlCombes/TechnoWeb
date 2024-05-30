@@ -1,7 +1,7 @@
 <template>
   <h3>Detail d'un film {{ idFilm }}</h3>
-  <v-card color="primary" class="mx-auto" max-width="344">
-    <!--max-width="344"-->
+  <!-- <v-card color="primary" class="mx-auto" max-width="344">
+
     <v-img
       :src="'https://image.tmdb.org/t/p/w500/' + data.film?.affiche"
       height="500px"
@@ -10,11 +10,7 @@
     <v-card-title>
       {{ data.film?.titre }}
     </v-card-title>
-    <!--
-      <v-card-subtitle>
-          {{ data.film?.titreOriginal }}
-      </v-card-subtitle>
-      -->
+
     <v-card-subtitle>
       {{ data.film?.genres }}
     </v-card-subtitle>
@@ -50,7 +46,7 @@
         Retour
       </v-btn>
     </v-card-actions>
-  </v-card>
+  </v-card> -->
 </template>
 
 <script setup>
@@ -63,60 +59,60 @@ const props = defineProps(["idFilm"]);
 // -- le film
 let data = reactive({ film: null, acteurs: null, equipe: null });
 
-const apiKey = "af1e1c8f8ad6efb5b326eabaffa38b8a";
+// const apiKey = "af1e1c8f8ad6efb5b326eabaffa38b8a";
 
-function getFilm() {
-  const url =
-    "https://api.themoviedb.org/3/movie/" +
-    props.idFilm +
-    "?api_key=" +
-    apiKey +
-    "&language=fr-FR" +
-    "&region=FR";
+// function getFilm() {
+//   const url =
+//     "https://api.themoviedb.org/3/movie/" +
+//     props.idFilm +
+//     "?api_key=" +
+//     apiKey +
+//     "&language=fr-FR" +
+//     "&region=FR";
 
-  const fetchOptions = { method: "GET" };
+//   const fetchOptions = { method: "GET" };
 
-  fetch(url, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      data.film = new Film(dataJSON);
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-function getActeurs() {
-  const url =
-    "https://api.themoviedb.org/3/movie/" +
-    props.idFilm +
-    "/credits" +
-    "?api_key=" +
-    apiKey +
-    "&language=fr-FR";
+//   fetch(url, fetchOptions)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((dataJSON) => {
+//       console.log(dataJSON);
+//       data.film = new Film(dataJSON);
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
+// function getActeurs() {
+//   const url =
+//     "https://api.themoviedb.org/3/movie/" +
+//     props.idFilm +
+//     "/credits" +
+//     "?api_key=" +
+//     apiKey +
+//     "&language=fr-FR";
 
-  const fetchOptions = { method: "GET" };
+//   const fetchOptions = { method: "GET" };
 
-  fetch(url, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      data.acteurs = dataJSON.cast;
-      data.equipe = dataJSON.crew;
+//   fetch(url, fetchOptions)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((dataJSON) => {
+//       console.log(dataJSON);
+//       data.acteurs = dataJSON.cast;
+//       data.equipe = dataJSON.crew;
 
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-onMounted(() => {
-  getFilm();
-  getActeurs();
-});
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
+// onMounted(() => {
+//   getFilm();
+//   getActeurs();
+// });
 </script>

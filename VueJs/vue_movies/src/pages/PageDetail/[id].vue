@@ -1,5 +1,5 @@
 <script setup>
-import FilmDetail from "@/components/FilmDetail.vue";
+import FilmDetail from "../../components/FilmDetail.vue";
 // useRoute permet de récupérer la route
 import { useRoute } from "vue-router";
 const route = useRoute();
