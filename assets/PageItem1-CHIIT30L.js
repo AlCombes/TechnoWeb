@@ -1,1 +1,0 @@
-import{_ as e,o as t,b as a,w as c,V as o,d as r}from"./index-C7Dpngrk.js";const n={};function s(_,f){return t(),a(o,null,{default:c(()=>[r("Item 1")]),_:1})}const l=e(n,[["render",s]]);export{l as default};
